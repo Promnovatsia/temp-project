@@ -1,0 +1,14 @@
+<section>
+  <div class="page-header">
+    <h1>
+      Activations
+    </h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="activation in activations" ui-sref="activations.edit({activationId: activation.id})" class="list-group-item">
+      <h4 class="list-group-item-heading" ng-bind="activation.data"></h4>
+      <p class="list-group-item-text" ng-bind="activation.content"></p>
+      <p class="list-group-item-text" ng-bind="activation.createdAt"></p>
+    </a>
+  </div>
+</section>

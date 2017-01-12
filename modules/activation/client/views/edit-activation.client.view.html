@@ -1,0 +1,31 @@
+<section>
+  <div class="page-header">
+    <h1>Edit Activation</h1>
+  </div>
+  <div class="col-md-12">
+    <label class="btn btn-danger pull-right" ng-click="remove(activation)">
+      <snap class="glyphicon glyphicon-erase"></snap>
+    </label>
+    <form name="activationForm" class="form-horizontal" ng-submit="update(activationForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label for="login">Data</label>
+          <input name="login" type="text" ng-model="activation.login" id="title" class="form-control" placeholder="Login" required>
+          <div ng-messages="activationForm.title.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Activation login is required.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="content">Content</label>
+          <textarea name="content" ng-model="activation.content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Update" class="btn btn-default">
+        </div>
+        <div ng-show="error" class="text-center alert alert-danger">
+          <strong ng-bind="error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

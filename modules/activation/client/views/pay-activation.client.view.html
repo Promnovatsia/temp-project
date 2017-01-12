@@ -1,0 +1,33 @@
+<section>
+    <div class="page-header">
+        <h1>
+            Pseudo Payment Page
+        </h1>
+    </div>
+    <div class="col-md-12">
+        <form name="activationForm" class="form-horizontal" ng-submit="pseudopay(activationForm.$valid)" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label>
+                        Login
+                    </label>
+                    <p ng-bind="activation.login"></p>
+                </div>
+                <div class="form-group">
+                    <label>
+                      Activation date
+                    </label>
+                    <p>
+                        {{activation.createdAt | date}}
+                    </p>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Pay" class="btn btn-default">
+                </div>
+                <div ng-show="error" class="text-center alert alert-danger">
+                    <strong ng-bind="error"></strong>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>
